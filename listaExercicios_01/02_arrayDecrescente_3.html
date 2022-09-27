@@ -1,0 +1,44 @@
+<script>
+    //Problema: Array em ordem decrescente
+    //Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
+
+    //ENTRADA
+    const n1 = Number(prompt("informe seu primeiro numero"))
+    const n2 = Number(prompt("informe seu segundo numero "))
+    const n3 = Number(prompt("informe seu terceiro numero "))
+
+    //PROCESSAMENTO
+    let numeros
+    if(n1>n2){
+        if(n2>n3){
+           numeros = [n1, n2, n3]
+        }
+        else if(n3>n2){
+            numeros = [n1, n3, n2]
+        }
+    }
+    else if(n2>n3){
+        if(n1>n3){
+            numeros = [n2, n1, n3]
+        }
+        else if (n3>n1){
+            numeros = [n2, n3, n1]
+        }
+    }
+    else if(n3>n2){
+        if(n2>n1){
+            numeros = [n3 , n2 , n1]
+        }
+        else if(n1>n2){
+            numeros = [n3 ,n1 , n2]
+        }
+    }
+    else{
+        numeros = ["todos os numeros sao iguais"]
+    }
+
+    //SAÍDA
+    document.write(numeros.join(" - "))
+
+</script>
